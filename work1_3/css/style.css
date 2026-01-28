@@ -5,7 +5,7 @@ header {
 }
 
 .wrapper {
-  width: 960px;
+  max-width: 960px;
   display: flex;
   justify-content: space-around;
   padding: 30px;
@@ -14,16 +14,22 @@ header {
 
 }
 
+.title {
+  padding: 5px 0;
+}
+
 ul {
   display: flex;
   /* justify-content: space-around; */
-  gap: 30px;
+  /* gap: 15px; */
   /* border: 1px solid blue; */
+  
 }
 
 li {
   border-right: 1px solid gray;
-  padding-right: 15px;
+  /* padding-right: 15px; */
+  padding: 5px 15px;
 }
 
 li:last-child {
@@ -50,5 +56,4 @@ li:last-child {
     font-size: 30px;
     border-bottom: 1px solid gray;
   }
-}
 }
