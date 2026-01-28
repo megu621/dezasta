@@ -48,11 +48,12 @@ li:last-child {
   }
   ul {
     flex-direction: column;
+    gap: 15px;
   }
 
   li {
     border-right: none;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-size: 30px;
     border-bottom: 1px solid gray;
   }
