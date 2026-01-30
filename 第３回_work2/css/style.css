@@ -1,4 +1,4 @@
-charset "utf-8";
+@charset "utf-8";
 
 /* cssリセット */
 
@@ -51,14 +51,20 @@ img {
 
 .content {
   max-width: 100%;
-  background: #eeeeee;
+  background: #f3f2f2;
   padding: 50px;
+  border: 1px solid red;
 }
 
 .content_title {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
   /* border: 1px solid green; */
+}
+
+.content_title,
+.title {
+  color: rgb(61, 153, 115);
 }
 
 .service {
@@ -67,12 +73,13 @@ img {
   display: flex;
   /* justify-content: space-between; */
   gap: 30px;
-  border: 1px solid red;
+  padding: 0 10px;
+  /* border: 1px solid red; */
 }
 
 .box {
   background: white;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 img {
@@ -84,6 +91,10 @@ img {
   padding: 2px 2px;
   margin-left: 5px;
   margin-top: 5px;
+}
+
+p {
+  padding: 10px;
 }
 
 @media screen and (max-width:400px){
