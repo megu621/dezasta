@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /* cssリセット */
 
 /*利用するタグによってこちらの内容は増やす*/
@@ -21,10 +19,9 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   /* サイト全体の文字色　黒は真っ黒にしない */
-  color: #000;
+  color: #4F270B;
   /* 優先順位、どの端末でも対応できるように複数指定、全てない場合サンセリフになる、分からなければ指定方法で検索 */
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 a {
@@ -49,62 +46,41 @@ img {
   border: none;
 }
 
-section {
+.menu {
+  max-width: 900px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  /* 横並び */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
   max-width: 100%;
-  background: #f3f2f2;
-  padding: 50px;
-  border: 1px solid red;
-}
-
-.content_title {
-  text-align: center;
-  margin: 50px 0;
-  /* border: 1px solid green; */
-}
-
-.content_title,
-.title {
-  color: rgb(61, 153, 115);
-}
-
-.service {
-  max-width: 960px;
   margin: 0 auto;
   display: flex;
-  /* justify-content: space-between; */
-  gap: 30px;
-  padding: 0 10px;
-  /* border: 1px solid red; */
+  justify-content: space-between;
+  /* 100%が超える段階で折り返される */
+  flex-wrap: wrap;
+  row-gap: 50px;
 }
 
 .box {
-  background: white;
-  /* border: 1px solid blue; */
+  /* boxサイズ親要素に対して◯％にする */
+  width: 30%;
+  height: 300px;
+  background: orange;
+  border: 1px solid black;
 }
 
-img {
-  width: 100%;
-  /* display: block; */
-}
-.title {
-  border-left: 7px solid green;
-  padding: 2px 2px;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-p {
-  padding: 10px;
-}
-
-@media screen and (max-width:400px){
-  .content {
-    padding: 50px 0;
-  }
-  
-  .service {
+@media screen and (max-width: 767px) {
+  .container {
     flex-direction: column;
+    padding: 0 10px;
   }
-  
-
-}
+  .box {
+    width: 100%;
+  }
+  }
