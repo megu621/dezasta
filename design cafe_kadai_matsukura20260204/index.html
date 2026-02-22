@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
       <h1>
         <img src="./images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE">
       </h1>
-      <div class="pc_nav">
+      <nav class="pc_nav">
         <ul>
           <li>ABOUT US</li>
           <li>MENU</li>
@@ -35,7 +36,20 @@
           <li>EVENT</li>
           <li>ACCESS</li>
         </ul>
+      </nav>
+
+      <div class="sp_btn">
+        <span></span>
       </div>
+      <nav class="sp_nav">
+        <ul>
+          <li>ABOUT US</li>
+          <li>MENU</li>
+          <li>GALLERY</li>
+          <li>EVENT</li>
+          <li>ACCESS</li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -106,20 +120,26 @@
 
       <div class="event_area">
         <div class="event_box">
-          <date>2024.06.23</date>
-          <p>7月はイベント出店のため0/0お休みします</p>
-        </div>
+          <p>
+            <span box="date">2024.06.23</span>
+            <span class="event_text">7月はイベント出店のため0/0お休みします</span>
+          </p>
+          <!-- </div> -->
 
-        <div class="event_box">
-          <date>2024.03.15</date>
-          <p>春の新商品新発売。話題のあのブランドとコラボ</p>
-        </div>
+          <!-- <div class="event_box"> -->
+          <p>
+            <span class="date">2024.03.15</span>
+            <span class="event_text">春の新商品新発売。話題のあのブランドとコラボ</span>
+          </p>
+          <!-- </div> -->
 
-        <div class="event_box">
-          <date>2024.02.06</date>
-          <p>コーヒーの日で30%OFFイベントを開催[3日間限定]</p>
+          <!-- <div class="event_box"> -->
+          <p>
+            <span class="date">2024.02.06</span>
+            <span class="event_text">コーヒーの日で30%OFFイベントを開催[3日間限定]</span>
+          </p>
+          <!-- </div> -->
         </div>
-      </div>
     </section>
 
     <section>
@@ -134,38 +154,44 @@
   </main>
 
   <footer>
-    <div class="footer_wrap">
+    <div class="footer_inner">
       <h4>
         <img src="./images/design_cafe_logo_footer@2x.png" alt="">
       </h4>
 
       <div class="shop_area">
-        <div class="info">
-          <ul>
-            <li>営業時間
-              <span>OPEN18:00/CLOSE24:00</span>
-            </li>
-          </ul>
-          <ul>
-            <li>住所
-              <span>150-0022</span>
-            </li>
-            <li>
-              <span>東京都渋谷区東京南1123デザインビルB1</span>
-            </li>
-          </ul>
-          <ul>
-            <li>メール
-              <a href="mailto:info@designcafe.tokyo">mailto:info@designcafe.tokyo</a>
-            </li>
-          </ul>
-        </div>
+        <dl class="info">
+          <div>
+            <dt>営業時間</dt>
+            <dd>OPEN18:00/CLOSE24:00</dd>
+          </div>
+          <div>
+            <dt>住所</dt>
+            <dd>150-0022 東京都渋谷区東京南1123 デザインビルB1</dd>
+          </div>
+          <div>
+            <dt>メール</dt>
+            <dd>
+              <a href="mailto:info@designcafe.tokyo">info@designcafe.tokyo</a>
+            </dd>
+          </div>
+        </dl>
+
+        <a href="#" class="page_top" src="images/to_top@2x.png" alt="">
       </div>
-      <img src="images/to_top@2x.png" alt="">
+      <p class="copyright">@2021 DESIGN CAFF</p>
     </div>
-    <small>&copy; 2021 DESIGN CAFF</small>
 
   </footer>
+
+  <script>
+    $(function () {
+      $('.sp_btn').on('click', function () {
+        $('.sp_btn').toggleClass('open');
+        $('.sp_nav').fadeToggle('');
+      })
+    })
+  </script>
 </body>
 
 </html>
