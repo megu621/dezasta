@@ -12,9 +12,16 @@
     href="https://fonts.googleapis.com/css2?family=Alatsi&family=Diplomata+SC&family=Noto+Sans+JP:wght@100..900&display=swap"
     rel="stylesheet">
 
+  <!-- jQueryのプラグインの読み込み -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- jQuery slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -23,6 +30,10 @@
       <div>
         <img src="./images/pc_first-100.jpg" alt="店内の様子">
       </div>
+      <div>
+        <img src="./images/slider_2.jpg" alt="店内の様子">
+      </div>
+
     </div>
     <div class="header_wrap">
       <h1>
@@ -30,11 +41,11 @@
       </h1>
       <nav class="pc_nav">
         <ul>
-          <li>ABOUT US</li>
-          <li>MENU</li>
-          <li>GALLERY</li>
-          <li>EVENT</li>
-          <li>ACCESS</li>
+          <li><a href="#about_box">ABOUT US</a></li>
+          <li><a href="#menu_area">MENU</a></li>
+          <li><a href="#gallery_area">GALLERY</a></li>
+          <li><a href="#event_area">EVENT</a></li>
+          <li><a href="#access_map">ACCESS</a></li>
         </ul>
       </nav>
 
@@ -43,11 +54,11 @@
       </div>
       <nav class="sp_nav">
         <ul>
-          <li>ABOUT US</li>
-          <li>MENU</li>
-          <li>GALLERY</li>
-          <li>EVENT</li>
-          <li>ACCESS</li>
+          <li><a href="#about_box">ABOUT US</a></li>
+          <li><a href="#menu_area">MENU</a></li>
+          <li><a href="#gallery_area">GALLERY</a></li>
+          <li><a href="#event_area">EVENT</a></li>
+          <li><a href="#access_map">ACCESS</a></li>
         </ul>
       </nav>
     </div>
@@ -61,7 +72,7 @@
     </div>
 
     <section>
-      <div class="about_box">
+      <div id="about_box" class="about_box">
         <img src="./images/pc_about-100.jpg" alt="乾杯しているところ">
         <div class="about_area">
           <h2>ABOUT US</h2>
@@ -77,7 +88,7 @@
       <!-- <div class="menu_box"> -->
       <h2>MENU</h2>
 
-      <div class="menu_area">
+      <div id="menu_area" class="menu_area">
         <div class="menu_box">
           <div class="style">
             <img src="./images/pc_menu_drink-100.jpg" alt="アイスドリンク">
@@ -104,24 +115,26 @@
       </div>
     </section>
 
-    <section class="gallery-area">
-      <h2>GALLERY</h2>
-      <div class="gallery_img">
-        <img src="./images/pc_gallary_01-100.jpg" alt="">
-        <img src="./images/pc_gallary_02-100.jpg" alt="">
-        <img src="./images/pc_gallary_03-100.jpg" alt="">
-        <img src="./images/pc_gallary_04-100.jpg" alt="">
-        <img src="./images/pc_gallary_05-100.jpg" alt="">
+    <section>
+      <div id="gallery_area" class="gallery_area">
+        <h2>GALLERY</h2>
+        <div class="gallery_img">
+          <img src="./images/pc_gallary_01-100.jpg" alt="">
+          <img src="./images/pc_gallary_02-100.jpg" alt="">
+          <img src="./images/pc_gallary_03-100.jpg" alt="">
+          <img src="./images/pc_gallary_04-100.jpg" alt="">
+          <img src="./images/pc_gallary_05-100.jpg" alt="">
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>EVENT</h2>
+      <h2 class="event">EVENT</h2>
 
-      <div class="event_area">
+      <div id="event_area" class="event_area">
         <div class="event_box">
           <p>
-            <span box="date">2024.06.23</span>
+            <span class="date">2024.06.23</span>
             <span class="event_text">7月はイベント出店のため0/0お休みします</span>
           </p>
           <!-- </div> -->
@@ -144,7 +157,7 @@
 
     <section>
       <h2 class="title">access</h2>
-      <div class="access_map">
+      <div id="access_map" class="access_map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179459.617369611!2d141.6462506571576!3d45.34767129750308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f103041ef412b63%3A0x6a48cddf8235c24c!2z5YyX5rW36YGT56ia5YaF5biC!5e0!3m2!1sja!2sjp!4v1770248327307!5m2!1sja!2sjp"
           style="border:0;" allowfullscreen="" loading="lazy"
@@ -155,9 +168,9 @@
 
   <footer>
     <div class="footer_inner">
-      <h4>
-        <img src="./images/design_cafe_logo_footer@2x.png" alt="">
-      </h4>
+      <!-- <h4> -->
+      <img src="./images/design_cafe_logo_footer@2x.png" alt="">
+      <!-- </h4> -->
 
       <div class="shop_area">
         <dl class="info">
@@ -167,7 +180,7 @@
           </div>
           <div>
             <dt>住所</dt>
-            <dd>150-0022 東京都渋谷区東京南1123 デザインビルB1</dd>
+            <dd>〒150-0022<br>東京都渋谷区東京南1123 デザインビルB1</dd>
           </div>
           <div>
             <dt>メール</dt>
@@ -176,11 +189,12 @@
             </dd>
           </div>
         </dl>
-
-        <a href="#" class="page_top" src="images/to_top@2x.png" alt="">
       </div>
-      <p class="copyright">@2021 DESIGN CAFF</p>
     </div>
+    <a href="#header" class="page_top">
+      <img src="images/to_top@2x.png" alt=""></a>
+    <p class="copyright">@2021 DESIGN CAFF</p>
+
 
   </footer>
 
@@ -190,6 +204,13 @@
         $('.sp_btn').toggleClass('open');
         $('.sp_nav').fadeToggle('');
       })
+      // スライドショー
+      $('.header_slider').slick({
+        autoplaySpeed: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: false,
+      });
     })
   </script>
 </body>
