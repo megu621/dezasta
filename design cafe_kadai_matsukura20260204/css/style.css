@@ -35,7 +35,7 @@ h1 img {
 .pc_nav,
 .sp_nav {
   font-size: 16px;
-  font-family: "Alatsi", sans-serif; 
+  font-family: "", sans-serif; 
 }
 .pc_nav ul {
   display: flex;
@@ -44,7 +44,7 @@ h1 img {
 
 .pc_nav ul li {
   color: white;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Alatsi", sans-serif;
 }
 
 /* スマホメニュー */
@@ -133,6 +133,8 @@ h1 img {
 }
 }
 
+
+
 section,
 .text_box{
 /* .footer_inner { */
@@ -150,13 +152,13 @@ section:last-child {
 }
 
 .about_box,
-.menu_area,
-.event_area {
+.menu_area {
   padding: 0 10px;
 }
 
+
 .text_box {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 132px auto 144px;
 }
 
@@ -249,11 +251,8 @@ h2 {
   text-align: left;
 }
 
-.gallery_area {
-  /* width: 100%; */
-  margin: calc(50% - 50vw);
+#gallery_area {
   max-width: none;
-  border: 1px solid red;
 }
 
 .gallery_img {
@@ -267,11 +266,16 @@ h2 {
   height: auto;
 }
 
+#event_area {
+  padding: 0 10px;
+}
+
 .event_area {
   border: 1px solid #4F270B;
   padding: 32px;
   background: white;
-  text-align: center;
+  /* text-align: center; */
+  margin: 0 auto;
 }
 
 .event_box {
@@ -281,12 +285,8 @@ h2 {
   line-height: 1;
   /* width: 630px; */
   /* margin: 0 auto; */
-  margin-bottom: 16px;
 }
 
-.event_box:last-child {
-  margin-bottom: 0;
-}
 
 .event_text {
   font-weight: medium;
@@ -295,13 +295,18 @@ h2 {
 
 .event_box .date {
   font-size: 20px;
-  font-weight: regular;
+  font-weight: bold;
   line-height: 1;
   margin: 60px;
 }
 
 .event_box p {
   text-align: left;
+  margin-bottom: 16px;
+}
+
+.event_box p:last-child {
+  margin-bottom: 0;
 }
 
 
@@ -317,8 +322,8 @@ h2 {
 
 .access_map iframe {
   width: 100%;
-  height: 500px;
-  /* display: block; */
+  height: 353px;
+  display: block;
 }
 
 footer {
@@ -335,7 +340,7 @@ footer {
   max-width: 1000px;
   display: flex;
   /* gap: 40px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* justify-content: space-between; */
   align-items: flex-start;
   margin: 0 auto;
@@ -347,11 +352,17 @@ footer {
   margin-right: 39px;
 }
 
-.shop_area .info div {
-  display: flex;
+.shop_area {
+  /* display: flex; */
   margin-bottom: 20px;
   font-size: 16px;
-  line-height: 1.5;
+  /* line-height: 1.5; */
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
 }
 
 .shop_area .info dt {
@@ -359,15 +370,17 @@ footer {
   margin-right: 40px;
 }
 
+
 /* 住所の下の間隔のあけ方は？ */
-.shop_area .info dt:nth-child(2) {
+.shop_area .info:nth-child(2) dd {
+  line-height: 1.5;
   margin-bottom: 5px;
 }
 .copyright {
   max-width: 1000px;
   /* display: inline-block; */
   margin: 39px auto 0;
-  border: 1px ÷solid red;
+  /* border: 1px solid red; */
 }
 
 footer .page_top img {
@@ -375,6 +388,11 @@ footer .page_top img {
   width: 140px;
   bottom: 100px;
   right: 109px;
+}
+
+.footer_inner,
+.copyright {
+  padding: 0 10px;
 }
 
 /* スライダー */
@@ -389,4 +407,100 @@ footer .page_top img {
 
 .slick-dotted.slick-slider {
   margin-bottom: 0;
+}
+
+@media screen and (max-width:768px) {
+  .about_box,
+  .menu_area,
+  .footer_inner {
+  padding: 0 20px;
+}
+
+  .message {
+  line-height: 1.5;
+}
+.text {
+  line-height: 2;
+  font-size: 16px;
+}
+.about_box {
+  flex-direction: column;
+}
+.about_box img {
+  width: 100%;
+  margin-right: 0;
+  border-bottom-right-radius: 0;
+}
+.about_area {
+  width: 100%;
+}
+.about_area h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+.about_message {
+  font-size: 24px;
+}
+.about_text {
+  font-size: 14px;
+  line-height: 2;
+}
+.menu_area {
+  flex-direction: column;
+  text-align: left;
+}
+.menu_box .style h3 {
+  top: 98%;
+}
+.gallery_img {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.gallery_img img {
+  display: none;
+}
+.gallery_img img:first-child {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.event_box {
+  width: 100%;
+}
+.event_box .date {
+  margin: 0;
+}
+.event_text {
+  /* display: block; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
+}
+.event_box p {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+.footer_inner {
+  display: block;
+  flex-direction: column;
+}
+.footer_inner img {
+  margin-bottom: 39px;
+}
+/* .shop_area .info  {
+  display: block;
+} */
+.shop_area info dd {
+  margin-bottom: 24px;
+}
+.info {
+  grid-template-columns: 1fr;;
+}
+.page_top {
+  right: 40px;
+}
 }

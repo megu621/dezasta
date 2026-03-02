@@ -25,13 +25,19 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="header_slider">
       <div>
-        <img src="./images/pc_first-100.jpg" alt="店内の様子">
+        <picture>
+          <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+          <img src="./images/pc_first-100.jpg" alt="店内の様子">
+        </picture>
       </div>
       <div>
-        <img src="./images/slider_2.jpg" alt="店内の様子">
+        <picture>
+          <source srcset="./images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+          <img src="./images/slider_2.jpg" alt="店内の様子">
+        </picture>
       </div>
 
     </div>
@@ -45,7 +51,7 @@
           <li><a href="#menu_area">MENU</a></li>
           <li><a href="#gallery_area">GALLERY</a></li>
           <li><a href="#event_area">EVENT</a></li>
-          <li><a href="#access_map">ACCESS</a></li>
+          <li><a href="#access_area">ACCESS</a></li>
         </ul>
       </nav>
 
@@ -58,7 +64,7 @@
           <li><a href="#menu_area">MENU</a></li>
           <li><a href="#gallery_area">GALLERY</a></li>
           <li><a href="#event_area">EVENT</a></li>
-          <li><a href="#access_map">ACCESS</a></li>
+          <li><a href="#access_area">ACCESS</a></li>
         </ul>
       </nav>
     </div>
@@ -68,11 +74,11 @@
     <div class="text_box">
       <p class="label">Have a happy day From a cup of coffe.</p>
       <p class="message">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
-      <p class="text">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+      <p class="text">毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br>こだわりのコーヒーを提供したい。</p>
     </div>
 
-    <section>
-      <div id="about_box" class="about_box">
+    <section id="about_box">
+      <div class="about_box">
         <img src="./images/pc_about-100.jpg" alt="乾杯しているところ">
         <div class="about_area">
           <h2>ABOUT US</h2>
@@ -84,11 +90,11 @@
       </div>
     </section>
 
-    <section>
+    <section id="menu_area">
       <!-- <div class="menu_box"> -->
       <h2>MENU</h2>
 
-      <div id="menu_area" class="menu_area">
+      <div class="menu_area">
         <div class="menu_box">
           <div class="style">
             <img src="./images/pc_menu_drink-100.jpg" alt="アイスドリンク">
@@ -115,8 +121,8 @@
       </div>
     </section>
 
-    <section>
-      <div id="gallery_area" class="gallery_area">
+    <section id="gallery_area">
+      <div class="gallery_area">
         <h2>GALLERY</h2>
         <div class="gallery_img">
           <img src="./images/pc_gallary_01-100.jpg" alt="">
@@ -128,10 +134,10 @@
       </div>
     </section>
 
-    <section>
+    <section id="event_area">
       <h2 class="event">EVENT</h2>
 
-      <div id="event_area" class="event_area">
+      <div class="event_area">
         <div class="event_box">
           <p>
             <span class="date">2024.06.23</span>
@@ -155,9 +161,9 @@
         </div>
     </section>
 
-    <section>
+    <section id="access_area">
       <h2 class="title">access</h2>
-      <div id="access_map" class="access_map">
+      <div class="access_map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179459.617369611!2d141.6462506571576!3d45.34767129750308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f103041ef412b63%3A0x6a48cddf8235c24c!2z5YyX5rW36YGT56ia5YaF5biC!5e0!3m2!1sja!2sjp!4v1770248327307!5m2!1sja!2sjp"
           style="border:0;" allowfullscreen="" loading="lazy"
@@ -174,26 +180,22 @@
 
       <div class="shop_area">
         <dl class="info">
-          <div>
-            <dt>営業時間</dt>
-            <dd>OPEN18:00/CLOSE24:00</dd>
-          </div>
-          <div>
-            <dt>住所</dt>
-            <dd>〒150-0022<br>東京都渋谷区東京南1123 デザインビルB1</dd>
-          </div>
-          <div>
-            <dt>メール</dt>
-            <dd>
-              <a href="mailto:info@designcafe.tokyo">info@designcafe.tokyo</a>
-            </dd>
-          </div>
+          <dt>営業時間</dt>
+          <dd>OPEN18:00/CLOSE24:00</dd>
+
+          <dt>住所</dt>
+          <dd>〒150-0022<br>東京都渋谷区東京南1123 デザインビルB1</dd>
+
+          <dt>メール</dt>
+          <dd>
+            <a href="mailto:info@designcafe.tokyo">info@designcafe.tokyo</a>
+          </dd>
         </dl>
       </div>
     </div>
     <a href="#header" class="page_top">
       <img src="images/to_top@2x.png" alt=""></a>
-    <p class="copyright">@2021 DESIGN CAFF</p>
+    <p class="copyright">@2021 DESIGN CAFE</p>
 
 
   </footer>
@@ -201,12 +203,17 @@
   <script>
     $(function () {
       $('.sp_btn').on('click', function () {
-        $('.sp_btn').toggleClass('open');
         $('.sp_nav').fadeToggle('');
+
+        /*バツ印が取れたら*/
+        $('.sp_btn').toggleClass('open');
+
       })
-      // スライドショー
+      /*スライドショー slickメソッドを使用する 左側の要素をスライドにする指定*/
       $('.header_slider').slick({
-        autoplaySpeed: true,
+        /*自動再生（デフォルトはfalse)*/
+        // autoplay: true,
+        /*切り替わるスピードの指定 2秒*/
         autoplaySpeed: 2000,
         dots: true,
         arrows: false,
