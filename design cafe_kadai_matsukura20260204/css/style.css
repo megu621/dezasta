@@ -267,15 +267,18 @@ h2 {
 #gallery_area {
   max-width: none;
 }
-
-.gallery_img {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr)
+.gallery_area {
+  max-width: 100%;
 }
 
+/* .gallery_img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr)
+} */
+
 .gallery-img img {
-  /* width: 100%; */
-  max-width: 100%;
+  width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -310,7 +313,7 @@ h2 {
 
 .event_box .date {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: medium;
   line-height: 1;
   margin-right: 60px;
 }
@@ -425,10 +428,10 @@ footer .page_top img {
 
 @media screen and (max-width: 1100px) {
   .message {
-    font-size: 31px;
+    font-size: 35px;
   }
   .text {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 2;
   }
   .about_area h2 {
@@ -436,6 +439,10 @@ footer .page_top img {
   }
 }
 @media screen and (max-width:767px) {
+    .label {
+    font-size: 16px;
+  }
+
   .about_box,
   .menu_area,
   .footer_inner {
@@ -494,8 +501,10 @@ h2 {
   gap:0;
   width: 100%;
 }
-.date {
+.event_box .date {
   flex-shrink: 0;
+  font-weight: medium;
+  font-size: 16px;
 }
 .event_text {
   /* flex: 1;
