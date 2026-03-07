@@ -15,9 +15,9 @@
   <!-- jQueryのプラグインの読み込み -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css"> -->
+    href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css">
 
 
   <link rel="stylesheet" href="./css/reset.css">
@@ -26,9 +26,8 @@
 
   <!-- jQuery slick -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script> -->
+  <!--remodal-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
 
 </head>
 
@@ -137,20 +136,26 @@
     <section id="gallery_area">
       <div class="gallery_area">
         <h2>GALLERY</h2>
-        <div class="remodal">
-          <div class="gallery_img">
-              <img src="./images/pc_gallary_01-100.jpg" alt="">
-              <img src="./images/pc_gallary_02-100.jpg" alt="">
-              <img src="./images/pc_gallary_03-100.jpg" alt="">
-              <img src="./images/pc_gallary_04-100.jpg" alt="">
-              <img src="./images/pc_gallary_05-100.jpg" alt="">
-              <img src="./images/pc_gallary_01-100.jpg" alt="">
-              <img src="./images/pc_gallary_02-100.jpg" alt="">
-              <img src="./images/pc_gallary_03-100.jpg" alt="">
-              <img src="./images/pc_gallary_04-100.jpg" alt="">
-              <img src="./images/pc_gallary_05-100.jpg" alt="">
-          </div>
+
+        <div class="gallery_img">
+          <a href="#modal_img1">
+            <img src="./images/pc_gallary_01-100.jpg" alt="">
+          </a>
         </div>
+        <img src="./images/pc_gallary_02-100.jpg" alt="">
+        <img src="./images/pc_gallary_03-100.jpg" alt="">
+        <img src="./images/pc_gallary_04-100.jpg" alt="">
+        <img src="./images/pc_gallary_05-100.jpg" alt="">
+        <img src="./images/pc_gallary_01-100.jpg" alt="">
+        <img src="./images/pc_gallary_02-100.jpg" alt="">
+        <img src="./images/pc_gallary_03-100.jpg" alt="">
+        <img src="./images/pc_gallary_04-100.jpg" alt="">
+        <img src="./images/pc_gallary_05-100.jpg" alt="">
+      </div>
+
+      <div class="remodal" date-remodal-id="modal-img1">
+        <button date-remodal-action="close" class="remodal-close"></button>
+        <img src="./images/pc_gallary_02-100.jpg" alt="拡大画像">
       </div>
     </section>
 
@@ -177,8 +182,8 @@
             <span class="date">2024.02.06</span>
             <span class="event_text">コーヒーの日で30%OFFイベントを開催[3日間限定]</span>
           </p>
-          <!-- </div> -->
         </div>
+      </div>
     </section>
 
     <section id="access_area">
@@ -232,7 +237,7 @@
       /*スライドショー slickメソッドを使用する 左側の要素をスライドにする指定*/
       $('.header_slider').slick({
         /*自動再生（デフォルトはfalse)*/
-        autoplay: true,
+        // autoplay: true,
         /*切り替わるスピードの指定 2秒*/
         autoplaySpeed: 2000,
         dots: true,
@@ -242,11 +247,18 @@
       $('.gallery_img').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
+        //  autoplay: true,
         autoplaySpeed: 2000,
-        dots: true,
+        // dots: true,
         arrows: false,
       })
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          slideToShow: 1,
+          // slidesToScroll: 1,
+        }
+      }]
     })
   </script>
 </body>
