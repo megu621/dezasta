@@ -426,10 +426,6 @@ footer .page_top img {
   .message {
     font-size: 35px;
   }
-  .text {
-    font-size: 20px;
-    line-height: 2;
-  }
   .about_area h2 {
     font-size: 32px;
   }
@@ -437,6 +433,10 @@ footer .page_top img {
 @media screen and (max-width:767px) {
     .label {
     font-size: 16px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 2;
   }
 
   .about_box,
@@ -583,6 +583,7 @@ h2 {
 }
 .footer_inner img {
   margin-bottom: 39px;
+  margin-right: 0;
 }
 /* .info {
   display: block;

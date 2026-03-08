@@ -22,6 +22,7 @@ li {
   color: #4F270B;
   /* 優先順位、どの端末でも対応できるように複数指定、全てない場合サンセリフになる、分からなければ指定方法で検索 */
   font-family: "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {

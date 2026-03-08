@@ -210,7 +210,7 @@
       </div>
       <div class="remodal" data-remodal-id="modal_img5">
         <button data-remodal-action="close" class="remodal-close"></button>
-        <img src="./images/pc_gallary_05-100.jpg" alt="拡大画像">
+        <img src="./images/pc_gallary_0-100.jpg" alt="拡大画像">
       </div>
     </section>
 
@@ -306,14 +306,15 @@
         autoplaySpeed: 2000,
         // dots: true,
         arrows: false,
+        responsive: [{
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            // slidesToScroll: 1,
+          }
+        }]
+
       })
-      responsive: [{
-        breakpoint: 767,
-        settings: {
-          slideToShow: 1,
-          // slidesToScroll: 1,
-        }
-      }]
     })
   </script>
 </body>
